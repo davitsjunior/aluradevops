@@ -1,0 +1,12 @@
+services: #serviço da aplicação
+  app:
+    build: . #constrói a imagem a partir do Dockerfile na raiz do projeto
+    container_name: apialuradevops #nome do container
+    ports:
+      - "8000:8000" #mapeia a porta 8000 do host para a porta 8000 do container
+                   #Conforme definido no Dockerfile com expose 8000
+    volumes:
+      - .:/app #Monta o diretório atual (onde está o código) em /app dentro do contanier
+
+
+      
